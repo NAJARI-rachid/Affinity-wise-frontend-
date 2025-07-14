@@ -1,0 +1,64 @@
+{
+  "hello": "Hello world",
+  "welcome": "Welcome to AffinityWise",
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Our Services",
+    "portfolio": "Portfolio",
+    "team": "Our Team",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "slogan": "IT expertise at the heart of your projects, creativity as our signature",
+    "intro": "AffinityWise supports you in your IT, development, digital marketing, video and design projects.",
+    "cta": "Contact us"
+  },
+  "about": {
+    "title": "About Us",
+    "presentation": "AffinityWise is a company specialized in IT consulting, development, digital marketing, video and design.",
+    "values": "Our values",
+    "value1": "Innovation",
+    "value2": "Excellence",
+    "value3": "Creativity",
+    "value4": "Client proximity",
+    "vision": "Our vision",
+    "visionText": "Supporting our clients in their digital transformation with a human and innovative approach.",
+    "history": "Our history",
+    "historyText": "AffinityWise was founded to meet the growing needs of companies in technology, marketing and design."
+  },
+  "services": {
+    "title": "Our Services",
+    "consulting": "IT Consulting",
+    "consultingDesc": "System administration, network, cloud, support missions",
+    "dev": "Development",
+    "devDesc": "Development for startups, freelancers, companies",
+    "marketing": "Marketing / ADS",
+    "marketingDesc": "Complete strategies (SEO, social networks, ...)",
+    "media": "Video & Graphic Design",
+    "mediaDesc": "Editing, design, visual identity"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "intro": "Discover some of our achievements in IT, design, video and marketing.",
+    "project1": "IT project for EDF",
+    "project1Desc": "Development of a cloud solution for EDF.",
+    "project2": "Orange marketing campaign",
+    "project2Desc": "Digital strategy and social media management for Orange."
+  },
+  "team": {
+    "title": "Our Team"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Your message",
+    "send": "Send",
+    "thanks": "Thank you for your message!",
+    "info": "You can also write to us at:"
+  }
+}

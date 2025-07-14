@@ -1,3 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tes styles personnalisés ici */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+body, html {
+  background-color: #fff !important;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,6 +30,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+   padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+
 }
 
 a {
@@ -22,32 +46,24 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 19px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 300;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #e7e4e4;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #f3f4f6;
 }
 button:focus,
 button:focus-visible {
@@ -63,6 +79,34 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+  }
+}
+.flag {
+  width: 24px;
+  height: auto;
+  object-fit: contain;
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+}
+.flag img {
+  width: 24px !important;
+  height: auto !important;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .flag {
+    width: 18px;
   }
 }

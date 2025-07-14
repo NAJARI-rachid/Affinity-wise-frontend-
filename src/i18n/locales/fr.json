@@ -1,0 +1,64 @@
+{
+  "hello": "Bonjour le monde",
+  "welcome": "Bienvenue sur AffinityWise",
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Nos services",
+    "portfolio": "Portfolio",
+    "team": "Notre équipe",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  },
+  "home": {
+    "slogan": "Expertise IT au cœur de vos projets, la créativité en signature",
+    "intro": "AffinityWise vous accompagne dans vos projets IT, développement, marketing digital, vidéo et design.",
+    "cta": "Contactez-nous"
+  },
+  "about": {
+    "title": "À propos de nous",
+    "presentation": "AffinityWise est une entreprise spécialisée dans le consulting IT, le développement, le marketing digital, la vidéo et le design.",
+    "values": "Nos valeurs",
+    "value1": "Innovation",
+    "value2": "Excellence",
+    "value3": "Créativité",
+    "value4": "Proximité client",
+    "vision": "Notre vision",
+    "visionText": "Accompagner nos clients dans leur transformation digitale avec une approche humaine et innovante.",
+    "history": "Notre histoire",
+    "historyText": "AffinityWise a été fondée pour répondre aux besoins croissants des entreprises en matière de technologie, de marketing et de design."
+  },
+  "services": {
+    "title": "Nos services",
+    "consulting": "Consulting IT",
+    "consultingDesc": "Missions d’administration système, réseau, cloud, support",
+    "dev": "Développement",
+    "devDesc": "Développement pour startups, freelances, entreprises",
+    "marketing": "Marketing / ADS",
+    "marketingDesc": "Stratégies complètes (SEO, réseaux sociaux...)",
+    "media": "Vidéo & Charte graphique",
+    "mediaDesc": "Montages, designs, identité visuelle"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "intro": "Découvrez quelques-unes de nos réalisations dans les domaines IT, design, vidéo et marketing.",
+    "project1": "Projet IT pour EDF",
+    "project1Desc": "Développement d’une solution cloud pour EDF.",
+    "project2": "Campagne marketing Orange",
+    "project2Desc": "Stratégie digitale et gestion des réseaux sociaux pour Orange."
+  },
+  "team": {
+    "title": "Notre équipe"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Votre message",
+    "send": "Envoyer",
+    "thanks": "Merci pour votre message !",
+    "info": "Vous pouvez aussi nous écrire à :"
+  }
+}
