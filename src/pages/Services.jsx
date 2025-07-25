@@ -38,10 +38,19 @@ const Services = () => {
     <section className="max-w-5xl mx-auto py-12 px-4 animate-fadeIn">
       <h2 className="text-4xl font-extrabold text-accent mb-10 text-center">{t('services.title', 'Nos services')}</h2>
       <div className="grid gap-8 md:grid-cols-2">
-        {services.map((service) => (
-          <div key={service.key} className="bg-white shadow-card rounded-card p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300 animate-fadeIn">
-            <div className="text-5xl mb-4">{service.icon}</div>
-            <h3 className="text-2xl font-bold text-primary mb-2">{t(service.titleKey)}</h3>
+        {services.map((service, idx) => (
+          <div
+            key={service.key}
+            className="bg-white shadow-card rounded-card p-8 flex flex-col items-center text-center transition-all duration-300 animate-fadeIn"
+            style={{
+              animationDelay: `${0.1 + idx * 0.15}s`,
+              boxShadow: '0 4px 16px 0 rgba(37,99,235,0.08)',
+            }}
+            onMouseEnter={e => e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(37,99,235,0.18)'}
+            onMouseLeave={e => e.currentTarget.style.boxShadow = '0 4px 16px 0 rgba(37,99,235,0.08)'}
+          >
+            <div className="text-5xl mb-4" style={{ color: '#2563eb' }}>{service.icon}</div>
+            <h3 className="text-2xl font-bold text-primary mb-2 font-poppins">{t(service.titleKey)}</h3>
             <p className="text-gray-600 mb-6">{t(service.descKey)}</p>
             <button className="bg-primary text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-accent transition-colors duration-200">
               {service.cta}

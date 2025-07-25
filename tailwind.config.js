@@ -8,8 +8,15 @@ export default {
     extend: {
       colors: {
         primary: '#2563eb', // bleu principal
-        secondary: '#f3f4f6', // gris clair
-        accent: '#1e293b', // bleu foncé/noir
+        secondary: '#f59e42', // orange
+        accent: '#10b981', // vert
+        background: '#f8fafc', // gris très clair
+        text: '#1e293b', // bleu foncé
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+        poppins: ['Poppins', 'ui-sans-serif', 'system-ui'],
+        outfit: ['Outfit', 'ui-sans-serif', 'system-ui'],
       },
       boxShadow: {
         card: '0 4px 16px 0 rgba(37,99,235,0.08)',

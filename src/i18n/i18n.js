@@ -13,7 +13,7 @@ i18n
       en: { translation: en },
       fr: { translation: fr },
     },
-    lng: 'en', // langue par défaut
+    lng: savedlang, // langue par défaut ou sauvegardée
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false

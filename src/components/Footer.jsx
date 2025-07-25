@@ -4,9 +4,13 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="bg-secondary text-center py-6 text-sm text-gray-600 border-t border-gray-200 mt-12">
-      <div className="max-w-4xl mx-auto">
-        © {new Date().getFullYear()} <span className="font-bold text-primary">AffinityWise</span>. {t('footer.rights', 'Tous droits réservés.')}
+    <footer style={{ background: '#2563eb', color: '#f8fafc', textAlign: 'center', padding: '32px 0', marginTop: 48 }}>
+      <div style={{ maxWidth: 800, margin: '0 auto', fontSize: 16 }}>
+        © {new Date().getFullYear()} <span style={{ fontWeight: 700, color: '#f59e42' }}>AffinityWise</span>. {t('footer.rights', 'Tous droits réservés.')}
+        <div style={{ marginTop: 12, display: 'flex', justifyContent: 'center', gap: 18 }}>
+          <a href="mailto:contact@affinitywise.com" style={{ color: '#f8fafc', fontSize: 22 }} title="Mail" target="_blank" rel="noopener noreferrer">✉️</a>
+          <a href="https://www.linkedin.com" style={{ color: '#f8fafc', fontSize: 22 }} title="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+        </div>
       </div>
     </footer>
   );
