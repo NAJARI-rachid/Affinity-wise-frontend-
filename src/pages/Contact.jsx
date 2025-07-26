@@ -3,9 +3,10 @@ import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { t } = useTranslation();
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -13,8 +14,10 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     setSubmitted(false);
     setError(null);
+    
     try {
       const response = await fetch('https://formspree.io/f/mayvlqen', {
         method: 'POST',
@@ -22,77 +25,252 @@ const Contact = () => {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
+          subject: form.subject,
           message: form.message,
         }),
       });
+      
       if (response.ok) {
         setSubmitted(true);
-        setForm({ name: '', email: '', message: '' });
+        setForm({ name: '', email: '', subject: '', message: '' });
       } else {
         setError('Une erreur est survenue. Veuillez réessayer.');
       }
     } catch (err) {
       setError('Une erreur est survenue. Veuillez réessayer.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
+  const contactInfo = [
+    {
+      icon: "/mail.png",
+      title: "Email",
+      value: "contact@affinitywise.com",
+      link: "mailto:contact@affinitywise.com",
+      description: "Envoyez-nous un email"
+    },
+    {
+      icon: "/telephone.png",
+      title: "Téléphone",
+      value: "+33 1 23 45 67 89",
+      link: "tel:+33123456789",
+      description: "Appelez-nous directement"
+    },
+    {
+      icon: "/in.png",
+      title: "LinkedIn",
+      value: "AffinityWise",
+      link: "https://www.linkedin.com/company/affinitywise",
+      description: "Suivez-nous sur LinkedIn"
+    }
+  ];
+
   return (
-    <section className="flex flex-col items-center justify-center min-h-[60vh] py-12 px-4 animate-fadeIn">
-      <div
-        className="bg-white shadow-card rounded-card p-10 max-w-xl w-full transition-all duration-300 animate-fadeIn"
-        style={{ animationDelay: '0.1s', boxShadow: '0 4px 16px 0 rgba(37,99,235,0.08)' }}
-        onMouseEnter={e => e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(37,99,235,0.18)'}
-        onMouseLeave={e => e.currentTarget.style.boxShadow = '0 4px 16px 0 rgba(37,99,235,0.08)'}
-      >
-        <h2 className="text-4xl font-extrabold text-accent mb-6 text-center font-poppins">{t('contact.title', 'Contact')}</h2>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
+    <section className="py-16 px-4 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-poppins">
+            {t('contact.title', 'Contactez-nous')}
+          </h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Prêt à transformer votre vision en réalité ? Notre équipe d'experts est là pour vous accompagner dans votre projet.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
+          {/* Contact Information */}
+          <div className="space-y-6">
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-6 font-poppins">
+                Informations de contact
+              </h3>
+              <div className="space-y-4">
+                {contactInfo.map((info, index) => (
+                  <div 
+                    key={index}
+                    className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                  >
+                    <div className="flex-shrink-0">
+                      <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center shadow-sm">
+                        <img 
+                          src={info.icon} 
+                          alt={info.title}
+                          className="w-4 h-4 object-contain"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-semibold text-gray-900 mb-1">
+                        {info.title}
+                      </h4>
+                      <a 
+                        href={info.link} 
+                        target={info.title === "LinkedIn" ? "_blank" : "_self"}
+                        rel={info.title === "LinkedIn" ? "noopener noreferrer" : ""}
+                        className="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 text-sm block"
+                      >
+                        {info.value}
+                      </a>
+                      <p className="text-gray-500 text-xs mt-1">
+                        {info.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Office Hours */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white">
+              <h3 className="text-xl font-bold mb-4 font-poppins">
+                Horaires d'ouverture
+              </h3>
+              <div className="space-y-2">
+                <div className="flex justify-between items-center py-2 border-b border-white/20">
+                  <span className="text-sm">Lundi - Vendredi</span>
+                  <span className="font-semibold text-sm">9h00 - 18h00</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-white/20">
+                  <span className="text-sm">Samedi</span>
+                  <span className="font-semibold text-sm">10h00 - 16h00</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-sm">Dimanche</span>
+                  <span className="font-semibold text-sm">Fermé</span>
+                </div>
+              </div>
+              <div className="mt-4 p-3 bg-white/10 rounded-lg">
+                <p className="text-sm font-medium">
+                  <strong>Réponse garantie sous 24h</strong> pour toutes vos demandes professionnelles.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+            <h3 className="text-xl font-bold text-gray-900 mb-6 font-poppins">
+              Envoyez-nous un message
+            </h3>
+            
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Nom complet *
+                  </label>
           <input
             type="text"
             name="name"
-            placeholder={t('contact.name', 'Nom')}
             value={form.name}
             onChange={handleChange}
-            className="border border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary text-base bg-[#f8fafc] font-sans"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                    placeholder="Votre nom complet"
             required
           />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email *
+                  </label>
           <input
             type="email"
             name="email"
-            placeholder={t('contact.email', 'Email')}
             value={form.email}
             onChange={handleChange}
-            className="border border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary text-base bg-[#f8fafc] font-sans"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                    placeholder="votre@email.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Sujet *
+                </label>
+                <input
+                  type="text"
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                  placeholder="Sujet de votre message"
             required
           />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Message *
+                </label>
           <textarea
             name="message"
-            placeholder={t('contact.message', 'Votre message')}
             value={form.message}
             onChange={handleChange}
-            className="border border-gray-300 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary text-base bg-[#f8fafc] font-sans"
             rows={5}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-none"
+                  placeholder="Décrivez votre projet ou votre demande..."
             required
           />
+              </div>
+
           <button
             type="submit"
-            className="bg-primary text-white px-8 py-3 rounded-full font-semibold shadow hover:bg-accent hover:scale-105 transition-all duration-200 text-lg font-poppins"
-            style={{ boxShadow: '0 2px 8px 0 rgba(37,99,235,0.10)' }}
-          >
-            {t('contact.send', 'Envoyer')}
+                disabled={isSubmitting}
+                className={`w-full py-3 px-4 rounded-lg font-semibold text-base transition-all duration-200 ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed text-white' 
+                    : 'bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg'
+                }`}
+              >
+                {isSubmitting ? (
+                  <div className="flex items-center justify-center">
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                    Envoi en cours...
+                  </div>
+                ) : (
+                  'Envoyer le message'
+                )}
           </button>
+
           {submitted && (
-            <div className="text-green-600 mt-2 text-center animate-fadeIn" style={{ animationDelay: '0.3s' }}>{t('contact.thanks', 'Merci pour votre message !')}</div>
+                <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-center">
+                  <div className="font-semibold">Message envoyé avec succès !</div>
+                  <div className="text-sm mt-1">Nous vous répondrons dans les plus brefs délais.</div>
+                </div>
           )}
+
           {error && (
-            <div className="text-red-600 mt-2 text-center animate-fadeIn" style={{ animationDelay: '0.3s' }}>{error}</div>
+                <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-center">
+                  <div className="font-semibold">Erreur</div>
+                  <div className="text-sm mt-1">{error}</div>
+                </div>
           )}
         </form>
-        <div className="mt-8 text-center text-gray-600 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-          <div>{t('contact.info', 'Vous pouvez aussi nous écrire à :')}</div>
-          <a href="mailto:contact@affinitywise.com" className="text-primary font-semibold">contact@affinitywise.com</a>
-          <div className="mt-2">+33 1 23 45 67 89</div>
-          <div className="mt-2">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary underline font-semibold">LinkedIn</a>
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center">
+          <div className="bg-gray-900 rounded-xl p-8 text-white">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 font-poppins">
+              Prêt à commencer votre projet ?
+            </h3>
+            <p className="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
+              Rejoignez les centaines d'entreprises qui nous font confiance pour transformer leurs idées en succès.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-base shadow-md hover:shadow-lg transition-all duration-200">
+                Demander un devis
+              </button>
+              <button className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-base hover:bg-white hover:text-gray-900 transition-all duration-200">
+                Voir nos réalisations
+              </button>
+            </div>
           </div>
         </div>
       </div>

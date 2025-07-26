@@ -39,5 +39,3 @@ export default {
   darkMode: 'class', // Ajout du support du mode sombre
 }
 
-import './index.css';
-
