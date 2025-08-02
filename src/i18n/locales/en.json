@@ -3,7 +3,7 @@
   "welcome": "Welcome to AffinityWise",
   "navbar": {
     "home": "Home",
-    "about": "About Us",
+    "about": "About",
     "services": "Our Services",
     "portfolio": "Portfolio",
     "team": "Our Team",
@@ -13,12 +13,12 @@
     "rights": "All rights reserved."
   },
   "home": {
-    "slogan": "IT expertise at the heart of your projects, creativity as our signature",
-    "intro": "AffinityWise supports you in your IT, development, digital marketing, video and design projects.",
+    "slogan": "IT expertise at the heart of your projects, creativity as signature",
+    "intro": "AffinityWise accompanies you in your IT projects, development, digital marketing, video and design.",
     "cta": "Contact us"
   },
   "about": {
-    "title": "About Us",
+    "title": "About us",
     "presentation": "AffinityWise is a company specialized in IT consulting, development, digital marketing, video and design.",
     "values": "Our values",
     "value1": "Innovation",
@@ -26,27 +26,27 @@
     "value3": "Creativity",
     "value4": "Client proximity",
     "vision": "Our vision",
-    "visionText": "Supporting our clients in their digital transformation with a human and innovative approach.",
+    "visionText": "Accompany our clients in their digital transformation with a human and innovative approach.",
     "history": "Our history",
     "historyText": "AffinityWise was founded to meet the growing needs of companies in technology, marketing and design."
   },
   "services": {
     "title": "Our Services",
     "consulting": "IT Consulting",
-    "consultingDesc": "System administration, network, cloud, support missions",
+    "consultingDesc": "Complete technical expertise to optimize your IT infrastructure, migrate to the cloud and secure your systems. Our team of experts accompanies you in all your technology projects.",
     "dev": "Development",
-    "devDesc": "Development for startups, freelancers, companies",
-    "marketing": "Marketing / ADS",
-    "marketingDesc": "Complete strategies (SEO, social networks, ...)",
-    "media": "Video & Graphic Design",
-    "mediaDesc": "Editing, design, visual identity"
+    "devDesc": "Custom development of web and mobile applications, APIs and integrations. We create innovative solutions adapted to your company's needs.",
+    "marketing": "Digital Marketing",
+    "marketingDesc": "Complete marketing strategies including SEO, social media management, advertising campaigns and analytics to maximize your digital presence.",
+    "media": "Video & Design",
+    "mediaDesc": "Creation of visual identities, professional video editing, motion design and corporate photography for impactful communication."
   },
   "portfolio": {
     "title": "Portfolio",
     "intro": "Discover some of our achievements in IT, design, video and marketing.",
-    "project1": "IT project for EDF",
+    "project1": "IT Project for EDF",
     "project1Desc": "Development of a cloud solution for EDF.",
-    "project2": "Orange marketing campaign",
+    "project2": "Orange Marketing Campaign",
     "project2Desc": "Digital strategy and social media management for Orange."
   },
   "team": {

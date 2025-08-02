@@ -33,19 +33,19 @@
   "services": {
     "title": "Nos services",
     "consulting": "Consulting IT",
-    "consultingDesc": "Missions d’administration système, réseau, cloud, support",
+    "consultingDesc": "Expertise technique complète pour optimiser vos infrastructures IT, migrer vers le cloud et sécuriser vos systèmes. Notre équipe d'experts vous accompagne dans tous vos projets technologiques.",
     "dev": "Développement",
-    "devDesc": "Développement pour startups, freelances, entreprises",
-    "marketing": "Marketing / ADS",
-    "marketingDesc": "Stratégies complètes (SEO, réseaux sociaux...)",
-    "media": "Vidéo & Charte graphique",
-    "mediaDesc": "Montages, designs, identité visuelle"
+    "devDesc": "Développement sur-mesure d'applications web et mobiles, APIs et intégrations. Nous créons des solutions innovantes adaptées aux besoins de votre entreprise.",
+    "marketing": "Marketing Digital",
+    "marketingDesc": "Stratégies marketing complètes incluant SEO, gestion des réseaux sociaux, campagnes publicitaires et analytics pour maximiser votre présence digitale.",
+    "media": "Vidéo & Design",
+    "mediaDesc": "Création d'identités visuelles, montage vidéo professionnel, motion design et photographie corporate pour une communication impactante."
   },
   "portfolio": {
     "title": "Portfolio",
     "intro": "Découvrez quelques-unes de nos réalisations dans les domaines IT, design, vidéo et marketing.",
     "project1": "Projet IT pour EDF",
-    "project1Desc": "Développement d’une solution cloud pour EDF.",
+    "project1Desc": "Développement d'une solution cloud pour EDF.",
     "project2": "Campagne marketing Orange",
     "project2Desc": "Stratégie digitale et gestion des réseaux sociaux pour Orange."
   },
