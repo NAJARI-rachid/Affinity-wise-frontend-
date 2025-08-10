@@ -39,3 +39,25 @@ export default {
   darkMode: 'class', // Ajout du support du mode sombre
 }
 
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}"
+  ],
+  theme: {
+    extend: {
+      animation: {
+        fadeInUp: "fadeInUp 0.6s ease-out",
+      },
+      keyframes: {
+        fadeInUp: {
+          "0%": { opacity: 0, transform: "translateY(8px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
+    },
+  },
+  plugins: [],
+}

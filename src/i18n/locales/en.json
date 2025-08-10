@@ -32,12 +32,10 @@
   },
   "services": {
     "title": "Our Services",
-    "consulting": "IT Consulting",
-    "consultingDesc": "Complete technical expertise to optimize your IT infrastructure, migrate to the cloud and secure your systems. Our team of experts accompanies you in all your technology projects.",
     "dev": "Development",
     "devDesc": "Custom development of web and mobile applications, APIs and integrations. We create innovative solutions adapted to your company's needs.",
-    "marketing": "Digital Marketing",
-    "marketingDesc": "Complete marketing strategies including SEO, social media management, advertising campaigns and analytics to maximize your digital presence.",
+    "Consulting": "Consulting IT",
+    "consultingDesc": "Complete technical expertise to optimize your IT infrastructure, migrate to the cloud and secure your systems. Our team of experts accompanies you in all your technology projects.",
     "media": "Video & Design",
     "mediaDesc": "Creation of visual identities, professional video editing, motion design and corporate photography for impactful communication."
   },

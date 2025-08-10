@@ -10,13 +10,16 @@ const About = () => {
           src="/About.jpg"
           alt="About AffinityWise"
           style={{
-            width: '100%',
-            maxHeight: '420px',
+            width: '100vw',
+            maxHeight: '100vh',
             objectFit: 'cover',
             objectPosition: 'center bottom',
             display: 'block',
-            borderRadius: '1.5rem',
-            boxShadow: '0 4px 24px 0 rgba(37,99,235,0.10)',
+            borderRadius: '0',
+            boxShadow: '0',
+            margin: '0',
+            padding: '0',
+          
           }}
         />
         <div
@@ -91,8 +94,12 @@ const About = () => {
       
       {/* Nouvelle section des valeurs avec design timeline */}
       <div className="bg-white shadow-card rounded-card p-10 max-w-4xl w-full">
-        <h3 className="text-2xl font-bold font-poppins text-center mb-12" style={{ color: '#1e293b' }}>{t('about.values', 'Nos valeurs')}</h3>
-        
+  <h3  className="text-4xl font-bold text-center mb-12" style={{ color: '#1e293b',fontFamily: "'Playfair Display', serif"
+    }}
+  >{t('about.values', 'Nos valeurs')}
+  </h3>
+
+
         {/* Timeline Container */}
         <div className="relative">
           {/* Vertical Timeline Line */}
@@ -110,14 +117,11 @@ const About = () => {
                     </div>
                     <h4 className="text-6xl font-bold font-outfit text-center" style={{ color: '#000000' }}>{t('about.value1', 'Innovation')}</h4>
                   </div>
-                  <p className="text-blue-100 text-sm leading-relaxed">Toujours innover pour nos clients avec les dernières technologies et méthodologies</p>
+                  <p className="text-blue-100 text-sm leading-relaxed font-sans tracking-wide" style={{ fontFamily: "'Work Sans', sans-serif" }}>
+                  Toujours innover pour nos clients avec les dernières technologies et méthodologies</p>
                 </div>
               </div>
-              
-              {/* Timeline Dot */}
-              <div className="relative z-10 mx-4">
-                <div className="w-8 h-8 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
-              </div>
+                            
               
               <div className="w-5/12 pl-12"></div>
             </div>
@@ -125,11 +129,6 @@ const About = () => {
             {/* Excellence */}
             <div className="flex items-center justify-center animate-fadeIn" style={{ animationDelay: '0.2s' }}>
               <div className="w-5/12 pr-12"></div>
-              
-              {/* Timeline Dot */}
-              <div className="relative z-10 mx-4">
-                <div className="w-8 h-8 bg-purple-500 rounded-full border-4 border-white shadow-lg"></div>
-              </div>
               
               <div className="w-5/12 pl-12">
                 <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -139,7 +138,8 @@ const About = () => {
                     </div>
                     <h4 className="text-6xl font-bold font-outfit text-center" style={{ color: '#000000' }}>{t('about.value2', 'Excellence')}</h4>
                   </div>
-                  <p className="text-purple-100 text-sm leading-relaxed">L'exigence de la qualité et du résultat dans chaque projet que nous réalisons</p>
+                  <p className="text-blue-100 text-sm leading-relaxed font-sans tracking-wide" style={{ fontFamily: "'Work Sans', sans-serif" }}>
+                  L'exigence de la qualité et du résultat dans chaque projet que nous réalisons</p>
                 </div>
               </div>
             </div>
@@ -154,14 +154,11 @@ const About = () => {
                     </div>
                     <h4 className="text-6xl font-bold font-outfit text-center" style={{ color: '#000000' }}>{t('about.value3', 'Créativité')}</h4>
                   </div>
-                  <p className="text-pink-100 text-sm leading-relaxed">L'originalité au service de vos projets avec des solutions innovantes et uniques</p>
+                  <p className="text-blue-100 text-sm leading-relaxed font-sans tracking-wide" style={{ fontFamily: "'Work Sans', sans-serif" }}>L'originalité au service de vos projets avec des solutions innovantes et uniques</p>
                 </div>
               </div>
               
-              {/* Timeline Dot */}
-              <div className="relative z-10 mx-4">
-                <div className="w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-lg"></div>
-              </div>
+             
               
               <div className="w-5/12 pl-12"></div>
             </div>
@@ -170,11 +167,7 @@ const About = () => {
             <div className="flex items-center justify-center animate-fadeIn" style={{ animationDelay: '0.4s' }}>
               <div className="w-5/12 pr-12"></div>
               
-              {/* Timeline Dot */}
-              <div className="relative z-10 mx-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-              </div>
-              
+ 
               <div className="w-5/12 pl-12">
                 <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center mb-3">
@@ -183,7 +176,7 @@ const About = () => {
                     </div>
                     <h4 className="text-6xl font-bold font-outfit text-center" style={{ color: '#000000' }}>{t('about.value4', 'Proximité client')}</h4>
                   </div>
-                  <p className="text-green-100 text-sm leading-relaxed">Un accompagnement personnalisé et réactif tout au long de votre projet</p>
+                  <p className="text-blue-100 text-sm leading-relaxed font-sans tracking-wide" style={{ fontFamily: "'Work Sans', sans-serif" }}>Un accompagnement personnalisé et réactif tout au long de votre projet</p>
                 </div>
               </div>
             </div>
