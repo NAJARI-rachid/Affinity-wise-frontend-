@@ -4,210 +4,486 @@ import { useTranslation } from "react-i18next";
 const About = () => {
   const { t } = useTranslation();
   return (
-    <section className="flex flex-col items-center justify-center min-h-[60vh] py-12 px-4 animate-fadeIn">
-      <div style={{ position: 'relative', width: '100%', marginBottom: '2rem' }}>
-        <img
-          src="/About.jpg"
-          alt="About AffinityWise"
-          style={{
-            width: '100vw',
-            maxHeight: '100vh',
-            objectFit: 'cover',
-            objectPosition: 'center bottom',
-            display: 'block',
-            borderRadius: '0',
-            boxShadow: '0',
-            margin: '0',
-            padding: '0',
+    <div style={{ minHeight: '100vh', backgroundColor: '#F9FAFB' }}>
+      {/* Hero Section */}
+      <section style={{
+        position: 'relative',
+        background: 'linear-gradient(135deg, #1F2937 0%, #374151 100%)',
+        padding: '80px 0 60px 0',
+        overflow: 'hidden'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1400&h=400&fit=crop&crop=center")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.1
+        }}></div>
+        
+        <div style={{
+          position: 'relative',
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 24px',
+          textAlign: 'center'
+        }}>
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '80px',
+            height: '80px',
+            background: 'linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)',
+            borderRadius: '20px',
+            marginBottom: '24px',
+            boxShadow: '0 20px 25px -5px rgba(59, 130, 246, 0.4)'
+          }}>
+            <span style={{ fontSize: '40px' }}>🏢</span>
+          </div>
           
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            borderRadius: '1.5rem',
-            background: 'rgba(0,0,0,0.35)',
-            pointerEvents: 'none',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            justifyContent: 'flex-start',
-            pointerEvents: 'none',
-          }}
-        >
-          <h1
-            style={{
-              color: '#fff',
-              fontSize: '2.7rem',
-              fontWeight: 900,
-              fontFamily: 'Poppins, ui-sans-serif',
-              textAlign: 'left',
-              textShadow: '0 4px 24px rgba(0,0,0,0.45)',
-              letterSpacing: 1,
-              padding: '1.2rem 2.5rem 0.5rem 2.5rem',
-              borderRadius: '1.5rem',
-              background: 'rgba(37,99,235,0.25)',
-              boxShadow: '0 4px 24px 0 rgba(0,0,0,0.18)',
-              maxWidth: '90vw',
-              lineHeight: 1.1,
-              pointerEvents: 'auto',
-              marginTop: '2.2rem',
-              marginLeft: '2.5rem',
-            }}
-          >
-            {t('about.title', 'À propos de nous')}
+          <h1 style={{
+            fontSize: '48px',
+            fontWeight: 'bold',
+            color: 'white',
+            marginBottom: '20px',
+            lineHeight: '1.2',
+            fontFamily: 'Poppins, sans-serif'
+          }}>
+            À propos de <span style={{ color: '#60A5FA' }}>nous</span>
           </h1>
-          <p
-            style={{
-              color: '#fff',
-              fontSize: '1.25rem',
-              fontWeight: 500,
-              fontFamily: 'Inter, ui-sans-serif',
-              textAlign: 'left',
-              textShadow: '0 2px 12px rgba(0,0,0,0.35)',
-              background: 'rgba(0,0,0,0.25)',
-              borderRadius: '1.2rem',
-              padding: '0.7rem 2.5rem',
-              marginLeft: '2.5rem',
-              marginTop: '0.5rem',
-              maxWidth: '700px',
-              pointerEvents: 'auto',
-            }}
-          >
+          <p style={{
+            fontSize: '20px',
+            color: '#E5E7EB',
+            maxWidth: '700px',
+            margin: '0 auto',
+            lineHeight: '1.6',
+            fontFamily: 'Inter, sans-serif'
+          }}>
             AffinityWise est une entreprise spécialisée dans le consulting IT, le développement, le marketing digital, la vidéo et le design.
           </p>
         </div>
-      </div>
-      
-      {/* Nouvelle section des valeurs avec design timeline */}
-      <div className="bg-white shadow-card rounded-card p-10 max-w-4xl w-full">
-  <h3  className="text-4xl font-bold text-center mb-12" style={{ color: '#1e293b',fontFamily: "'Playfair Display', serif"
-    }}
-  >{t('about.values', 'Nos valeurs')}
-  </h3>
+      </section>
 
+      {/* Values Section */}
+      <section style={{
+        padding: '80px 0',
+        backgroundColor: 'white'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 24px'
+        }}>
+          <div style={{
+            textAlign: 'center',
+            marginBottom: '60px'
+          }}>
+            <h2 style={{
+              fontSize: '36px',
+              fontWeight: 'bold',
+              color: '#1F2937',
+              marginBottom: '16px',
+              fontFamily: 'Poppins, sans-serif'
+            }}>
+              Nos <span style={{ color: '#3B82F6' }}>Valeurs</span>
+            </h2>
+            <p style={{
+              fontSize: '18px',
+              color: '#6B7280',
+              maxWidth: '600px',
+              margin: '0 auto',
+              lineHeight: '1.6',
+              fontFamily: 'Inter, sans-serif'
+            }}>
+              Les principes qui guident notre approche et notre relation avec nos clients
+            </p>
+          </div>
 
-        {/* Timeline Container */}
-        <div className="relative">
-          {/* Vertical Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-green-500 h-full rounded-full" style={{ top: '80px', bottom: '80px' }}></div>
-          
-          {/* Values Timeline */}
-          <div className="space-y-10">
+          {/* Values Grid */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '32px',
+            marginBottom: '80px'
+          }}>
             {/* Innovation */}
-            <div className="flex items-center justify-center animate-fadeIn" style={{ animationDelay: '0.1s' }}>
-              <div className="w-5/12 pr-12 text-right">
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="flex flex-col items-center mb-3">
-                    <div className="bg-white bg-opacity-20 rounded-full p-8 mb-4">
-                      <img src="/innovation.png" alt="Innovation" style={{ width: '200px', height: '200px', objectFit: 'contain', filter: 'brightness(1.1) contrast(1.1) saturate(1.2)' }} />
-                    </div>
-                    <h4 className="text-6xl font-bold font-outfit text-center" style={{ color: '#000000' }}>{t('about.value1', 'Innovation')}</h4>
-                  </div>
-                  <p className="text-blue-100 text-sm leading-relaxed font-sans tracking-wide" style={{ fontFamily: "'Work Sans', sans-serif" }}>
-                  Toujours innover pour nos clients avec les dernières technologies et méthodologies</p>
-                </div>
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '24px',
+              padding: '32px',
+              boxShadow: '0 15px 20px -5px rgba(0, 0, 0, 0.1)',
+              border: '1px solid #E5E7EB',
+              textAlign: 'center',
+              transition: 'all 0.3s ease'
+            }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #3B82F6, #60A5FA)',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 24px auto',
+                boxShadow: '0 10px 25px -5px rgba(59, 130, 246, 0.4)'
+              }}>
+                <span style={{ fontSize: '40px' }}>💡</span>
               </div>
-                            
-              
-              <div className="w-5/12 pl-12"></div>
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: 'bold',
+                color: '#1F2937',
+                marginBottom: '16px',
+                fontFamily: 'Poppins, sans-serif'
+              }}>
+                Innovation
+              </h3>
+              <p style={{
+                color: '#6B7280',
+                fontSize: '16px',
+                lineHeight: '1.6',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                Toujours innover pour nos clients avec les dernières technologies et méthodologies
+              </p>
             </div>
 
             {/* Excellence */}
-            <div className="flex items-center justify-center animate-fadeIn" style={{ animationDelay: '0.2s' }}>
-              <div className="w-5/12 pr-12"></div>
-              
-              <div className="w-5/12 pl-12">
-                <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="flex flex-col items-center mb-3">
-                    <div className="bg-white bg-opacity-20 rounded-full p-8 mb-4">
-                      <img src="/excellence.png" alt="Excellence" style={{ width: '200px', height: '200px', objectFit: 'contain', filter: 'brightness(1.1) contrast(1.1) saturate(1.2)' }} />
-                    </div>
-                    <h4 className="text-6xl font-bold font-outfit text-center" style={{ color: '#000000' }}>{t('about.value2', 'Excellence')}</h4>
-                  </div>
-                  <p className="text-blue-100 text-sm leading-relaxed font-sans tracking-wide" style={{ fontFamily: "'Work Sans', sans-serif" }}>
-                  L'exigence de la qualité et du résultat dans chaque projet que nous réalisons</p>
-                </div>
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '24px',
+              padding: '32px',
+              boxShadow: '0 15px 20px -5px rgba(0, 0, 0, 0.1)',
+              border: '1px solid #E5E7EB',
+              textAlign: 'center',
+              transition: 'all 0.3s ease'
+            }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #8B5CF6, #A78BFA)',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 24px auto',
+                boxShadow: '0 10px 25px -5px rgba(139, 92, 246, 0.4)'
+              }}>
+                <span style={{ fontSize: '40px' }}>⭐</span>
               </div>
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: 'bold',
+                color: '#1F2937',
+                marginBottom: '16px',
+                fontFamily: 'Poppins, sans-serif'
+              }}>
+                Excellence
+              </h3>
+              <p style={{
+                color: '#6B7280',
+                fontSize: '16px',
+                lineHeight: '1.6',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                L'exigence de la qualité et du résultat dans chaque projet que nous réalisons
+              </p>
             </div>
 
             {/* Créativité */}
-            <div className="flex items-center justify-center animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-              <div className="w-5/12 pr-12 text-right">
-                <div className="bg-gradient-to-r from-pink-500 to-pink-600 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="flex flex-col items-center mb-3">
-                    <div className="bg-white bg-opacity-20 rounded-full p-8 mb-4">
-                      <img src="/créativité.png" alt="Créativité" style={{ width: '200px', height: '200px', objectFit: 'contain', filter: 'brightness(1.1) contrast(1.1) saturate(1.2)' }} />
-                    </div>
-                    <h4 className="text-6xl font-bold font-outfit text-center" style={{ color: '#000000' }}>{t('about.value3', 'Créativité')}</h4>
-                  </div>
-                  <p className="text-blue-100 text-sm leading-relaxed font-sans tracking-wide" style={{ fontFamily: "'Work Sans', sans-serif" }}>L'originalité au service de vos projets avec des solutions innovantes et uniques</p>
-                </div>
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '24px',
+              padding: '32px',
+              boxShadow: '0 15px 20px -5px rgba(0, 0, 0, 0.1)',
+              border: '1px solid #E5E7EB',
+              textAlign: 'center',
+              transition: 'all 0.3s ease'
+            }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #EC4899, #F472B6)',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 24px auto',
+                boxShadow: '0 10px 25px -5px rgba(236, 72, 153, 0.4)'
+              }}>
+                <span style={{ fontSize: '40px' }}>🎨</span>
               </div>
-              
-             
-              
-              <div className="w-5/12 pl-12"></div>
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: 'bold',
+                color: '#1F2937',
+                marginBottom: '16px',
+                fontFamily: 'Poppins, sans-serif'
+              }}>
+                Créativité
+              </h3>
+              <p style={{
+                color: '#6B7280',
+                fontSize: '16px',
+                lineHeight: '1.6',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                L'originalité au service de vos projets avec des solutions innovantes et uniques
+              </p>
             </div>
 
             {/* Proximité client */}
-            <div className="flex items-center justify-center animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-              <div className="w-5/12 pr-12"></div>
-              
- 
-              <div className="w-5/12 pl-12">
-                <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="flex flex-col items-center mb-3">
-                    <div className="bg-white bg-opacity-20 rounded-full p-8 mb-4">
-                      <img src="/client.png" alt="Proximité client" style={{ width: '200px', height: '200px', objectFit: 'contain', filter: 'brightness(1.1) contrast(1.1) saturate(1.2)' }} />
-                    </div>
-                    <h4 className="text-6xl font-bold font-outfit text-center" style={{ color: '#000000' }}>{t('about.value4', 'Proximité client')}</h4>
-                  </div>
-                  <p className="text-blue-100 text-sm leading-relaxed font-sans tracking-wide" style={{ fontFamily: "'Work Sans', sans-serif" }}>Un accompagnement personnalisé et réactif tout au long de votre projet</p>
-                </div>
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '24px',
+              padding: '32px',
+              boxShadow: '0 15px 20px -5px rgba(0, 0, 0, 0.1)',
+              border: '1px solid #E5E7EB',
+              textAlign: 'center',
+              transition: 'all 0.3s ease'
+            }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #10B981, #34D399)',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 24px auto',
+                boxShadow: '0 10px 25px -5px rgba(16, 185, 129, 0.4)'
+              }}>
+                <span style={{ fontSize: '40px' }}>🤝</span>
               </div>
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: 'bold',
+                color: '#1F2937',
+                marginBottom: '16px',
+                fontFamily: 'Poppins, sans-serif'
+              }}>
+                Proximité client
+              </h3>
+              <p style={{
+                color: '#6B7280',
+                fontSize: '16px',
+                lineHeight: '1.6',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                Un accompagnement personnalisé et réactif tout au long de votre projet
+              </p>
+            </div>
+          </div>
+
+          {/* Vision Section */}
+          <div style={{
+            background: 'linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%)',
+            borderRadius: '24px',
+            padding: '60px 40px',
+            textAlign: 'center',
+            marginBottom: '60px',
+            border: '1px solid #E5E7EB'
+          }}>
+            <div style={{
+              width: '80px',
+              height: '80px',
+              background: 'linear-gradient(135deg, #F59E0B, #FBBF24)',
+              borderRadius: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              margin: '0 auto 24px auto',
+              boxShadow: '0 10px 25px -5px rgba(245, 158, 11, 0.4)'
+            }}>
+              <span style={{ fontSize: '40px' }}>🌟</span>
+            </div>
+            <h3 style={{
+              fontSize: '32px',
+              fontWeight: 'bold',
+              color: '#1F2937',
+              marginBottom: '16px',
+              fontFamily: 'Poppins, sans-serif'
+            }}>
+              Notre vision
+            </h3>
+            <p style={{
+              fontSize: '18px',
+              color: '#6B7280',
+              maxWidth: '600px',
+              margin: '0 auto',
+              lineHeight: '1.6',
+              fontFamily: 'Inter, sans-serif'
+            }}>
+              Accompagner nos clients dans leur transformation digitale avec une approche humaine et innovante.
+            </p>
+          </div>
+
+          {/* History Section */}
+          <div style={{
+            background: 'white',
+            borderRadius: '24px',
+            padding: '60px 40px',
+            textAlign: 'center',
+            boxShadow: '0 15px 20px -5px rgba(0, 0, 0, 0.1)',
+            border: '1px solid #E5E7EB'
+          }}>
+            <div style={{
+              width: '80px',
+              height: '80px',
+              background: 'linear-gradient(135deg, #6B7280, #9CA3AF)',
+              borderRadius: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              margin: '0 auto 24px auto',
+              boxShadow: '0 10px 25px -5px rgba(107, 114, 128, 0.4)'
+            }}>
+              <span style={{ fontSize: '40px' }}>📖</span>
+            </div>
+            <h3 style={{
+              fontSize: '32px',
+              fontWeight: 'bold',
+              color: '#1F2937',
+              marginBottom: '16px',
+              fontFamily: 'Poppins, sans-serif'
+            }}>
+              Notre histoire
+            </h3>
+            <p style={{
+              fontSize: '18px',
+              color: '#6B7280',
+              maxWidth: '600px',
+              margin: '0 auto',
+              lineHeight: '1.6',
+              fontFamily: 'Inter, sans-serif'
+            }}>
+              AffinityWise a été fondée pour répondre aux besoins croissants des entreprises en matière de technologie, de marketing et de design. Notre mission est de transformer les défis digitaux en opportunités de croissance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section style={{
+        padding: '80px 0',
+        backgroundColor: '#F9FAFB'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 24px'
+        }}>
+          <div style={{
+            textAlign: 'center',
+            marginBottom: '60px'
+          }}>
+            <h2 style={{
+              fontSize: '36px',
+              fontWeight: 'bold',
+              color: '#1F2937',
+              marginBottom: '16px',
+              fontFamily: 'Poppins, sans-serif'
+            }}>
+              AffinityWise en <span style={{ color: '#3B82F6' }}>chiffres</span>
+            </h2>
+            <p style={{
+              fontSize: '18px',
+              color: '#6B7280',
+              maxWidth: '600px',
+              margin: '0 auto',
+              lineHeight: '1.6',
+              fontFamily: 'Inter, sans-serif'
+            }}>
+              Quelques statistiques qui témoignent de notre engagement et de notre expertise
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '48px',
+            textAlign: 'center'
+          }}>
+            <div>
+              <div style={{
+                fontSize: '48px',
+                fontWeight: 'bold',
+                background: 'linear-gradient(135deg, #3B82F6, #06B6D4)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                marginBottom: '16px'
+              }}>
+                5+
+              </div>
+              <div style={{
+                color: '#6B7280',
+                fontWeight: '600',
+                fontSize: '18px',
+                fontFamily: 'Inter, sans-serif'
+              }}>Années d'expérience</div>
+            </div>
+            <div>
+              <div style={{
+                fontSize: '48px',
+                fontWeight: 'bold',
+                background: 'linear-gradient(135deg, #8B5CF6, #EC4899)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                marginBottom: '16px'
+              }}>
+                150+
+              </div>
+              <div style={{
+                color: '#6B7280',
+                fontWeight: '600',
+                fontSize: '18px',
+                fontFamily: 'Inter, sans-serif'
+              }}>Projets réalisés</div>
+            </div>
+            <div>
+              <div style={{
+                fontSize: '48px',
+                fontWeight: 'bold',
+                background: 'linear-gradient(135deg, #10B981, #059669)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                marginBottom: '16px'
+              }}>
+                98%
+              </div>
+              <div style={{
+                color: '#6B7280',
+                fontWeight: '600',
+                fontSize: '18px',
+                fontFamily: 'Inter, sans-serif'
+              }}>Satisfaction client</div>
+            </div>
+            <div>
+              <div style={{
+                fontSize: '48px',
+                fontWeight: 'bold',
+                background: 'linear-gradient(135deg, #F59E0B, #DC2626)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                marginBottom: '16px'
+              }}>
+                24/7
+              </div>
+              <div style={{
+                color: '#6B7280',
+                fontWeight: '600',
+                fontSize: '18px',
+                fontFamily: 'Inter, sans-serif'
+              }}>Support disponible</div>
             </div>
           </div>
         </div>
-        
-        {/* Séparateur graphique */}
-        <div style={{ width: '100%', margin: '2.5rem 0' }}>
-          <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 40, display: 'block' }}><path d="M0 40 Q 360 0 720 40 T 1440 40 V60 H0V40Z" fill="#f3f4f6"/></svg>
-        </div>
-        
-        {/* Notre vision */}
-        <div className="bg-white shadow-card rounded-2xl p-10 max-w-3xl w-full mb-10 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-          <h3 className="text-2xl font-bold text-primary mb-4 font-poppins text-center" style={{ color: '#1e293b' }}>{t('about.vision', 'Notre vision')}</h3>
-          <div className="text-4xl mb-3 text-center">🌟</div>
-          <p className="text-gray-700 text-base text-center">{t('about.visionText', 'Accompagner nos clients dans leur transformation digitale avec une approche humaine et innovante.')}</p>
-        </div>
-        
-        {/* Séparateur graphique */}
-        <div style={{ width: '100%', margin: '2.5rem 0' }}>
-          <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 40, display: 'block' }}><path d="M0 40 Q 360 0 720 40 T 1440 40 V60 H0V40Z" fill="#f3f4f6"/></svg>
-        </div>
-        
-        {/* Notre histoire */}
-        <div className="bg-white shadow-card rounded-2xl p-10 max-w-3xl w-full animate-fadeIn" style={{ animationDelay: '0.5s' }}>
-          <h3 className="text-2xl font-bold text-primary mb-4 font-poppins text-center" style={{ color: '#1e293b' }}>{t('about.history', 'Notre histoire')}</h3>
-          <div className="text-4xl mb-3 text-center">📖</div>
-          <p className="text-gray-700 text-base text-center">{t('about.historyText', 'AffinityWise a été fondée pour répondre aux besoins croissants des entreprises en matière de technologie, de marketing et de design.')}</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
