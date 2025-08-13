@@ -34,8 +34,10 @@
     "title": "Nos services",
     "consulting": "Consulting IT",
     "consultingDesc": "Expertise technique complète pour optimiser vos infrastructures IT, migrer vers le cloud et sécuriser vos systèmes. Notre équipe d'experts vous accompagne dans tous vos projets technologiques.",
-    "dev": "Développement",
+    "dev": "Développement Web",
     "devDesc": "Développement sur-mesure d'applications web et mobiles, APIs et intégrations. Nous créons des solutions innovantes adaptées aux besoins de votre entreprise.",
+    "design": "Design & Création",
+    "designDesc": "Design UX/UI professionnel, maquettes graphiques, supports print et web, et motion design pour créer des expériences visuelles impactantes.",
     "marketing": "Marketing Digital",
     "marketingDesc": "Stratégies marketing complètes incluant SEO, gestion des réseaux sociaux, campagnes publicitaires et analytics pour maximiser votre présence digitale.",
     "media": "Vidéo & Design",
@@ -50,7 +52,8 @@
     "project2Desc": "Stratégie digitale et gestion des réseaux sociaux pour Orange."
   },
   "team": {
-    "title": "Notre équipe"
+    "title": "Notre équipe",
+    "intro": "Découvrez les talents passionnés qui composent notre équipe et qui donnent vie à vos projets digitaux."
   },
   "contact": {
     "title": "Contact",

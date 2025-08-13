@@ -96,17 +96,17 @@ const Team = () => {
             lineHeight: '1.2',
             fontFamily: 'Poppins, sans-serif'
           }}>
-            Notre <span style={{ color: '#60A5FA' }}>Équipe</span>
+            {t('team.title')}
           </h1>
           <p style={{
             fontSize: '20px',
             color: '#E5E7EB',
-            maxWidth: '600px',
+            maxWidth: '700px',
             margin: '0 auto',
             lineHeight: '1.6',
             fontFamily: 'Inter, sans-serif'
           }}>
-            Découvrez les talents passionnés qui font d'AffinityWise une entreprise d'excellence dans le conseil IT et le développement digital.
+            {t('team.intro')}
           </p>
         </div>
       </section>
@@ -132,7 +132,7 @@ const Team = () => {
               marginBottom: '16px',
               fontFamily: 'Poppins, sans-serif'
             }}>
-              Rencontrez nos <span style={{ color: '#3B82F6' }}>Experts</span>
+              Rencontrez notre <span style={{ color: '#3B82F6' }}>équipe</span>
             </h2>
             <p style={{
               fontSize: '18px',
@@ -142,32 +142,30 @@ const Team = () => {
               lineHeight: '1.6',
               fontFamily: 'Inter, sans-serif'
             }}>
-              Une équipe pluridisciplinaire d'experts passionnés par l'innovation et l'excellence technique
+              Des experts passionnés qui combinent créativité et expertise technique pour créer des solutions exceptionnelles
             </p>
           </div>
 
-          {/* Team Grid */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '32px',
-            marginBottom: '80px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '32px'
           }}>
-            {teamMembers.map((member, idx) => (
+            {teamMembers.map((member, index) => (
               <div
-                key={idx}
+                key={member.name}
                 style={{
                   backgroundColor: 'white',
                   borderRadius: '24px',
                   overflow: 'hidden',
                   boxShadow: '0 15px 20px -5px rgba(0, 0, 0, 0.1)',
+                  border: '1px solid #E5E7EB',
                   transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  border: '1px solid #E5E7EB'
+                  cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-8px)';
-                  e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+                  e.currentTarget.style.boxShadow = '0 25px 35px -12px rgba(0, 0, 0, 0.25)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
@@ -178,75 +176,60 @@ const Team = () => {
                 <div style={{
                   position: 'relative',
                   height: '200px',
-                  background: 'linear-gradient(135deg, #3B82F6, #60A5FA)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '20px'
+                  overflow: 'hidden',
+                  background: 'linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)'
                 }}>
                   <div style={{
-                    position: 'relative',
-                    width: '120px',
-                    height: '120px',
-                    borderRadius: '50%',
-                    overflow: 'hidden',
-                    border: '4px solid white',
-                    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.3)'
+                    position: 'absolute',
+                    top: '16px',
+                    right: '16px',
+                    width: '50px',
+                    height: '50px',
+                    background: 'rgba(255, 255, 255, 0.2)',
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(255, 255, 255, 0.3)'
                   }}>
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover'
-                      }}
-                      onError={(e) => {
-                        e.target.src = `https://ui-avatars.com/api/?name=${member.name}&size=256&background=2563eb&color=fff&font-size=0.4`;
-                      }}
-                    />
+                    <span style={{ fontSize: '24px' }}>👤</span>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div style={{ padding: '24px' }}>
-                  {/* Name and Role */}
-                  <div style={{
-                    textAlign: 'center',
-                    marginBottom: '20px'
+                <div style={{ padding: '32px' }}>
+                  <h3 style={{
+                    fontSize: '24px',
+                    fontWeight: 'bold',
+                    color: '#1F2937',
+                    marginBottom: '8px',
+                    fontFamily: 'Poppins, sans-serif'
                   }}>
-                    <h3 style={{
-                      fontSize: '24px',
-                      fontWeight: 'bold',
-                      color: '#1F2937',
-                      marginBottom: '8px',
-                      fontFamily: 'Poppins, sans-serif'
-                    }}>
-                      {member.name}
-                    </h3>
-                    <p style={{
-                      color: '#3B82F6',
-                      fontWeight: '600',
-                      fontSize: '16px',
-                      fontFamily: 'Inter, sans-serif'
-                    }}>
-                      {member.role}
-                    </p>
-                  </div>
-
-                  {/* Description */}
+                    {member.name}
+                  </h3>
+                  
+                  <p style={{
+                    color: '#3B82F6',
+                    fontWeight: '600',
+                    marginBottom: '16px',
+                    fontSize: '16px',
+                    fontFamily: 'Inter, sans-serif'
+                  }}>
+                    {member.role}
+                  </p>
+                  
                   <p style={{
                     color: '#6B7280',
-                    fontSize: '14px',
-                    lineHeight: '1.6',
                     marginBottom: '20px',
-                    textAlign: 'center',
+                    lineHeight: '1.6',
+                    fontSize: '14px',
                     fontFamily: 'Inter, sans-serif'
                   }}>
                     {member.description}
                   </p>
 
-                  {/* Expertise */}
+                  {/* Expertise Tags */}
                   <div style={{ marginBottom: '24px' }}>
                     <h4 style={{
                       fontSize: '12px',
@@ -257,23 +240,22 @@ const Team = () => {
                       letterSpacing: '0.05em',
                       fontFamily: 'Inter, sans-serif'
                     }}>
-                      Expertises
+                      Expertise
                     </h4>
                     <div style={{
                       display: 'flex',
                       flexWrap: 'wrap',
-                      gap: '8px',
-                      justifyContent: 'center'
+                      gap: '8px'
                     }}>
-                      {member.expertise.map((skill, skillIdx) => (
+                      {member.expertise.map((skill, skillIndex) => (
                         <span
-                          key={skillIdx}
+                          key={skillIndex}
                           style={{
                             backgroundColor: '#F3F4F6',
                             color: '#374151',
-                            padding: '4px 8px',
-                            borderRadius: '6px',
-                            fontSize: '11px',
+                            padding: '6px 12px',
+                            borderRadius: '20px',
+                            fontSize: '12px',
                             fontWeight: '500',
                             fontFamily: 'Inter, sans-serif'
                           }}
@@ -291,66 +273,49 @@ const Team = () => {
                   }}>
                     <div style={{
                       display: 'flex',
-                      justifyContent: 'center',
-                      gap: '12px'
+                      alignItems: 'center',
+                      marginBottom: '8px'
                     }}>
-                      {/* Email */}
-                      <a 
-                        href={`mailto:${member.email}`} 
+                      <span style={{ fontSize: '14px', marginRight: '8px' }}>📧</span>
+                      <span style={{
+                        color: '#6B7280',
+                        fontSize: '14px',
+                        fontFamily: 'Inter, sans-serif'
+                      }}>
+                        {member.email}
+                      </span>
+                    </div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginBottom: '8px'
+                    }}>
+                      <span style={{ fontSize: '14px', marginRight: '8px' }}>📱</span>
+                      <span style={{
+                        color: '#6B7280',
+                        fontSize: '14px',
+                        fontFamily: 'Inter, sans-serif'
+                      }}>
+                        {member.phone}
+                      </span>
+                    </div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center'
+                    }}>
+                      <span style={{ fontSize: '14px', marginRight: '8px' }}>🔗</span>
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          width: '40px',
-                          height: '40px',
-                          backgroundColor: '#F3F4F6',
-                          borderRadius: '10px',
-                          transition: 'all 0.3s ease',
+                          color: '#3B82F6',
+                          fontSize: '14px',
+                          fontFamily: 'Inter, sans-serif',
                           textDecoration: 'none'
                         }}
-                        title={member.email}
                       >
-                        <span style={{ fontSize: '18px' }}>📧</span>
-                      </a>
-
-                      {/* Phone */}
-                      <a 
-                        href={`tel:${member.phone}`} 
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          width: '40px',
-                          height: '40px',
-                          backgroundColor: '#F3F4F6',
-                          borderRadius: '10px',
-                          transition: 'all 0.3s ease',
-                          textDecoration: 'none'
-                        }}
-                        title={member.phone}
-                      >
-                        <span style={{ fontSize: '18px' }}>📱</span>
-                      </a>
-
-                      {/* LinkedIn */}
-                      <a 
-                        href={member.linkedin} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          width: '40px',
-                          height: '40px',
-                          backgroundColor: '#F3F4F6',
-                          borderRadius: '10px',
-                          transition: 'all 0.3s ease',
-                          textDecoration: 'none'
-                        }}
-                        title="LinkedIn"
-                      >
-                        <span style={{ fontSize: '18px' }}>💼</span>
+                        LinkedIn
                       </a>
                     </div>
                   </div>
@@ -358,53 +323,71 @@ const Team = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Bottom CTA */}
-          <div style={{
-            textAlign: 'center'
+      {/* CTA Section */}
+      <section style={{
+        padding: '80px 0',
+        background: 'linear-gradient(135deg, #1F2937 0%, #111827 100%)'
+      }}>
+        <div style={{
+          maxWidth: '700px',
+          margin: '0 auto',
+          padding: '0 24px',
+          textAlign: 'center'
+        }}>
+          <h2 style={{
+            fontSize: '36px',
+            fontWeight: 'bold',
+            color: 'white',
+            marginBottom: '20px',
+            fontFamily: 'Poppins, sans-serif'
           }}>
-            <div style={{
-              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-              borderRadius: '24px',
-              padding: '60px 40px',
+            Prêt à collaborer avec <span style={{ color: '#60A5FA' }}>nous</span> ?
+          </h2>
+          <p style={{
+            fontSize: '18px',
+            color: '#D1D5DB',
+            marginBottom: '32px',
+            lineHeight: '1.6',
+            fontFamily: 'Inter, sans-serif'
+          }}>
+            Notre équipe d'experts est prête à transformer vos idées en réalité. Contactez-nous pour commencer votre projet.
+          </p>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px',
+            alignItems: 'center'
+          }}>
+            <button style={{
+              backgroundColor: '#3B82F6',
               color: 'white',
-              boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.4)'
+              padding: '16px 32px',
+              borderRadius: '12px',
+              fontWeight: '600',
+              fontSize: '16px',
+              border: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 8px 16px -3px rgba(59, 130, 246, 0.4)',
+              transition: 'all 0.3s ease'
             }}>
-              <h3 style={{
-                fontSize: '36px',
-                fontWeight: 'bold',
-                marginBottom: '16px',
-                fontFamily: 'Poppins, sans-serif'
-              }}>
-                Rejoignez notre équipe
-              </h3>
-              <p style={{
-                fontSize: '18px',
-                marginBottom: '32px',
-                opacity: 0.9,
-                maxWidth: '600px',
-                margin: '0 auto 32px auto',
-                lineHeight: '1.6',
-                fontFamily: 'Inter, sans-serif'
-              }}>
-                Vous souhaitez faire partie de notre aventure et contribuer à l'innovation digitale ? Contactez-nous pour discuter des opportunités !
-              </p>
-              <button style={{
-                backgroundColor: 'white',
-                color: '#3B82F6',
-                padding: '16px 32px',
-                borderRadius: '12px',
-                fontWeight: '600',
-                fontSize: '16px',
-                border: 'none',
-                cursor: 'pointer',
-                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.2)',
-                transition: 'all 0.3s ease',
-                fontFamily: 'Inter, sans-serif'
-              }}>
-                Nous contacter
-              </button>
-            </div>
+              Prendre contact
+            </button>
+            <button style={{
+              backgroundColor: 'transparent',
+              color: 'white',
+              padding: '16px 32px',
+              borderRadius: '12px',
+              fontWeight: '600',
+              fontSize: '16px',
+              border: '2px solid rgba(255, 255, 255, 0.3)',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
+            }}>
+              Voir nos services
+            </button>
           </div>
         </div>
       </section>

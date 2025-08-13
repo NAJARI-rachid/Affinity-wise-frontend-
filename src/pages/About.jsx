@@ -53,7 +53,7 @@ const About = () => {
             lineHeight: '1.2',
             fontFamily: 'Poppins, sans-serif'
           }}>
-            À propos de <span style={{ color: '#60A5FA' }}>nous</span>
+            {t('about.title')}
           </h1>
           <p style={{
             fontSize: '20px',
@@ -63,7 +63,7 @@ const About = () => {
             lineHeight: '1.6',
             fontFamily: 'Inter, sans-serif'
           }}>
-            AffinityWise est une entreprise spécialisée dans le consulting IT, le développement, le marketing digital, la vidéo et le design.
+            {t('about.presentation')}
           </p>
         </div>
       </section>
@@ -140,7 +140,7 @@ const About = () => {
                 marginBottom: '16px',
                 fontFamily: 'Poppins, sans-serif'
               }}>
-                Innovation
+                {t('about.value1')}
               </h3>
               <p style={{
                 color: '#6B7280',
@@ -182,7 +182,7 @@ const About = () => {
                 marginBottom: '16px',
                 fontFamily: 'Poppins, sans-serif'
               }}>
-                Excellence
+                {t('about.value2')}
               </h3>
               <p style={{
                 color: '#6B7280',
@@ -224,7 +224,7 @@ const About = () => {
                 marginBottom: '16px',
                 fontFamily: 'Poppins, sans-serif'
               }}>
-                Créativité
+                {t('about.value3')}
               </h3>
               <p style={{
                 color: '#6B7280',
@@ -266,7 +266,7 @@ const About = () => {
                 marginBottom: '16px',
                 fontFamily: 'Poppins, sans-serif'
               }}>
-                Proximité client
+                {t('about.value4')}
               </h3>
               <p style={{
                 color: '#6B7280',
@@ -308,7 +308,7 @@ const About = () => {
               marginBottom: '16px',
               fontFamily: 'Poppins, sans-serif'
             }}>
-              Notre vision
+              {t('about.vision')}
             </h3>
             <p style={{
               fontSize: '18px',
@@ -318,7 +318,7 @@ const About = () => {
               lineHeight: '1.6',
               fontFamily: 'Inter, sans-serif'
             }}>
-              Accompagner nos clients dans leur transformation digitale avec une approche humaine et innovante.
+              {t('about.visionText')}
             </p>
           </div>
 
@@ -351,7 +351,7 @@ const About = () => {
               marginBottom: '16px',
               fontFamily: 'Poppins, sans-serif'
             }}>
-              Notre histoire
+              {t('about.history')}
             </h3>
             <p style={{
               fontSize: '18px',
@@ -361,7 +361,7 @@ const About = () => {
               lineHeight: '1.6',
               fontFamily: 'Inter, sans-serif'
             }}>
-              AffinityWise a été fondée pour répondre aux besoins croissants des entreprises en matière de technologie, de marketing et de design. Notre mission est de transformer les défis digitaux en opportunités de croissance.
+              {t('about.historyText')}
             </p>
           </div>
         </div>
@@ -426,6 +426,7 @@ const About = () => {
                 fontFamily: 'Inter, sans-serif'
               }}>Années d'expérience</div>
             </div>
+            
             <div>
               <div style={{
                 fontSize: '48px',
@@ -444,6 +445,7 @@ const About = () => {
                 fontFamily: 'Inter, sans-serif'
               }}>Projets réalisés</div>
             </div>
+            
             <div>
               <div style={{
                 fontSize: '48px',
@@ -462,6 +464,7 @@ const About = () => {
                 fontFamily: 'Inter, sans-serif'
               }}>Satisfaction client</div>
             </div>
+            
             <div>
               <div style={{
                 fontSize: '48px',

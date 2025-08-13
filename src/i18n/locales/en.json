@@ -32,10 +32,14 @@
   },
   "services": {
     "title": "Our Services",
-    "dev": "Development",
-    "devDesc": "Custom development of web and mobile applications, APIs and integrations. We create innovative solutions adapted to your company's needs.",
-    "Consulting": "Consulting IT",
+    "consulting": "IT Consulting",
     "consultingDesc": "Complete technical expertise to optimize your IT infrastructure, migrate to the cloud and secure your systems. Our team of experts accompanies you in all your technology projects.",
+    "dev": "Web Development",
+    "devDesc": "Custom development of web and mobile applications, APIs and integrations. We create innovative solutions adapted to your company's needs.",
+    "design": "Design & Creation",
+    "designDesc": "Professional UX/UI design, graphic mockups, print and web materials, and motion design to create impactful visual experiences.",
+    "marketing": "Digital Marketing",
+    "marketingDesc": "Complete marketing strategies including SEO, social media management, advertising campaigns and analytics to maximize your digital presence.",
     "media": "Video & Design",
     "mediaDesc": "Creation of visual identities, professional video editing, motion design and corporate photography for impactful communication."
   },
@@ -48,7 +52,8 @@
     "project2Desc": "Digital strategy and social media management for Orange."
   },
   "team": {
-    "title": "Our Team"
+    "title": "Our Team",
+    "intro": "Discover the passionate talents who make up our team and bring your digital projects to life."
   },
   "contact": {
     "title": "Contact",
