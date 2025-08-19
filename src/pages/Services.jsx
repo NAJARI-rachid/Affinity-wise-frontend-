@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const { t } = useTranslation();
@@ -12,14 +13,15 @@ const Services = () => {
       img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=400&fit=crop&crop=center",
       icon: "💼",
       features: [
-        "Stratégie marketing digitale",
-        "Gestion des réseaux sociaux",
-        "Campagnes publicitaires",
-        "SEO et référencement",
-        "Analytics et reporting"
+        "Audit de sécurité informatique",
+        "Optimisation des processus IT",
+        "Stratégie de transformation digitale",
+        "Gestion de projet agile",
+        "Formation et accompagnement"
       ],
       price: "À partir de 400€/jour",
-      color: "#3B82F6"
+      color: "#3B82F6",
+      gradient: "linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)"
     },
     {
       key: "dev",
@@ -28,13 +30,15 @@ const Services = () => {
       img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop&crop=center",
       icon: "💻",
       features: [
-        "Sites vitrines",
-        "Applications web",
+        "Sites web responsifs",
+        "Applications web modernes",
         "Applications mobiles",
+        "E-commerce et marketplaces",
         "Maintenance et optimisation"
       ],
       price: "Sur devis",
-      color: "#8B5CF6"
+      color: "#8B5CF6",
+      gradient: "linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)"
     },
     {
       key: "design",
@@ -43,13 +47,66 @@ const Services = () => {
       img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop&crop=center",
       icon: "🎨",
       features: [
-        "Design UX/UI",
+        "Identité visuelle complète",
+        "Design UX/UI moderne",
+        "Logos et branding",
         "Maquettes graphiques",
-        "Supports print et web",
-        "Motion design"
+        "Motion design et animations"
       ],
       price: "Sur devis",
-      color: "#10B981"
+      color: "#F59E0B",
+      gradient: "linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%)"
+    },
+    {
+      key: "video",
+      titleKey: "services.video",
+      descKey: "services.videoDesc",
+      img: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop&crop=center",
+      icon: "🎬",
+      features: [
+        "Vidéos promotionnelles",
+        "Motion design et animations",
+        "Contenus pour réseaux sociaux",
+        "Films d'entreprise",
+        "Post-production et montage"
+      ],
+      price: "Sur devis",
+      color: "#EF4444",
+      gradient: "linear-gradient(135deg, #EF4444 0%, #F87171 100%)"
+    },
+    {
+      key: "marketing",
+      titleKey: "services.marketing",
+      descKey: "services.marketingDesc",
+      img: "https://images.unsplash.com/photo-1557838923-2985c318be48?w=600&h=400&fit=crop&crop=center",
+      icon: "📈",
+      features: [
+        "Stratégie marketing digitale",
+        "Gestion des réseaux sociaux",
+        "Campagnes publicitaires",
+        "SEO et référencement",
+        "Analytics et reporting"
+      ],
+      price: "À partir de 300€/jour",
+      color: "#10B981",
+      gradient: "linear-gradient(135deg, #10B981 0%, #34D399 100%)"
+    },
+    {
+      key: "formation",
+      titleKey: "services.formation",
+      descKey: "services.formationDesc",
+      img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=center",
+      icon: "🎓",
+      features: [
+        "Formation en développement web",
+        "Ateliers design et créativité",
+        "Formation outils numériques",
+        "Accompagnement personnalisé",
+        "Certifications professionnelles"
+      ],
+      price: "À partir de 200€/jour",
+      color: "#8B5CF6",
+      gradient: "linear-gradient(135deg, #8B5CF6 0%, #C084FC 100%)"
     }
   ];
 
@@ -92,7 +149,7 @@ const Services = () => {
             marginBottom: '24px',
             boxShadow: '0 20px 25px -5px rgba(59, 130, 246, 0.4)'
           }}>
-            <span style={{ fontSize: '40px' }}>💼</span>
+            <span style={{ fontSize: '40px' }}>🚀</span>
           </div>
           
           <h1 style={{
@@ -103,7 +160,7 @@ const Services = () => {
             lineHeight: '1.2',
             fontFamily: 'Poppins, sans-serif'
           }}>
-            {t('services.title')}
+            Nos Services Professionnels
           </h1>
           <p style={{
             fontSize: '20px',
@@ -113,7 +170,7 @@ const Services = () => {
             lineHeight: '1.6',
             fontFamily: 'Inter, sans-serif'
           }}>
-            Une gamme complète de services conçus pour répondre aux défis technologiques modernes
+            Une gamme complète de services conçus pour répondre aux défis technologiques modernes et transformer vos idées en réalité
           </p>
         </div>
       </section>
@@ -155,7 +212,7 @@ const Services = () => {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))',
             gap: '32px'
           }}>
             {services.map((service) => (
@@ -168,7 +225,8 @@ const Services = () => {
                   boxShadow: '0 15px 20px -5px rgba(0, 0, 0, 0.1)',
                   border: '1px solid #E5E7EB',
                   transition: 'all 0.3s ease',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  position: 'relative'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-8px)';
@@ -187,7 +245,7 @@ const Services = () => {
                 }}>
                   <img
                     src={service.img}
-                    alt={t(service.titleKey)}
+                    alt={service.titleKey}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -195,23 +253,23 @@ const Services = () => {
                       transition: 'transform 0.3s ease'
                     }}
                     onError={(e) => {
-                      e.target.src = `https://ui-avatars.com/api/?name=${t(service.titleKey)}&size=400&background=${service.color.replace('#', '')}&color=fff&font-size=0.4`;
+                      e.target.src = `https://ui-avatars.com/api/?name=${service.titleKey}&size=400&background=${service.color.replace('#', '')}&color=fff&font-size=0.4`;
                     }}
                   />
                   <div style={{
                     position: 'absolute',
                     top: '16px',
                     right: '16px',
-                    width: '50px',
-                    height: '50px',
-                    backgroundColor: service.color,
-                    borderRadius: '12px',
+                    width: '60px',
+                    height: '60px',
+                    background: service.gradient,
+                    borderRadius: '16px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     boxShadow: '0 8px 16px -3px rgba(0, 0, 0, 0.3)'
                   }}>
-                    <span style={{ fontSize: '24px' }}>{service.icon}</span>
+                    <span style={{ fontSize: '28px' }}>{service.icon}</span>
                   </div>
                 </div>
 
@@ -224,7 +282,12 @@ const Services = () => {
                     marginBottom: '12px',
                     fontFamily: 'Poppins, sans-serif'
                   }}>
-                    {t(service.titleKey)}
+                    {service.titleKey === "services.consulting" ? "Consulting IT" :
+                     service.titleKey === "services.dev" ? "Développement Web" :
+                     service.titleKey === "services.design" ? "Design & Création" :
+                     service.titleKey === "services.video" ? "Production Vidéo" :
+                     service.titleKey === "services.marketing" ? "Marketing Digital" :
+                     service.titleKey === "services.formation" ? "Formation & Accompagnement" : service.titleKey}
                   </h3>
                   
                   <p style={{
@@ -234,7 +297,12 @@ const Services = () => {
                     fontSize: '16px',
                     fontFamily: 'Inter, sans-serif'
                   }}>
-                    {t(service.descKey)}
+                    {service.descKey === "services.consultingDesc" ? "Expertise stratégique pour optimiser vos processus IT et accompagner votre transformation digitale." :
+                     service.descKey === "services.devDesc" ? "Développement de solutions web et mobiles modernes avec les dernières technologies." :
+                     service.descKey === "services.designDesc" ? "Création d'identités visuelles uniques et de designs créatifs pour votre marque." :
+                     service.descKey === "services.videoDesc" ? "Production de contenus audiovisuels professionnels pour valoriser votre communication." :
+                     service.descKey === "services.marketingDesc" ? "Stratégies marketing digitales pour augmenter votre visibilité et vos conversions." :
+                     service.descKey === "services.formationDesc" ? "Formation et accompagnement personnalisés pour développer les compétences de vos équipes." : service.descKey}
                   </p>
 
                   {/* Features */}
@@ -260,7 +328,7 @@ const Services = () => {
                           <div style={{
                             width: '8px',
                             height: '8px',
-                            backgroundColor: service.color,
+                            background: service.gradient,
                             borderRadius: '50%',
                             marginTop: '6px',
                             marginRight: '12px',
@@ -286,7 +354,7 @@ const Services = () => {
                     justifyContent: 'space-between'
                   }}>
                     <span style={{
-                      backgroundColor: service.color,
+                      background: service.gradient,
                       color: 'white',
                       padding: '8px 16px',
                       borderRadius: '20px',
@@ -297,6 +365,28 @@ const Services = () => {
                     }}>
                       {service.price}
                     </span>
+                    <button style={{
+                      background: 'transparent',
+                      color: service.color,
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      fontWeight: '600',
+                      fontSize: '14px',
+                      border: `2px solid ${service.color}`,
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      fontFamily: 'Inter, sans-serif'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = service.color;
+                      e.currentTarget.style.color = 'white';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'transparent';
+                      e.currentTarget.style.color = service.color;
+                    }}>
+                      En savoir plus
+                    </button>
                   </div>
                 </div>
               </div>
@@ -425,13 +515,13 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section avec liens vers Contact */}
       <section style={{
         padding: '80px 0',
         background: 'linear-gradient(135deg, #1F2937 0%, #111827 100%)'
       }}>
         <div style={{
-          maxWidth: '700px',
+          maxWidth: '800px',
           margin: '0 auto',
           padding: '0 24px',
           textAlign: 'center'
@@ -460,33 +550,55 @@ const Services = () => {
             gap: '16px',
             alignItems: 'center'
           }}>
-            <button style={{
-              backgroundColor: '#3B82F6',
-              color: 'white',
-              padding: '16px 32px',
-              borderRadius: '12px',
-              fontWeight: '600',
-              fontSize: '16px',
-              border: 'none',
-              cursor: 'pointer',
-              boxShadow: '0 8px 16px -3px rgba(59, 130, 246, 0.4)',
-              transition: 'all 0.3s ease'
-            }}>
-              Demander un devis gratuit
-            </button>
-            <button style={{
-              backgroundColor: 'transparent',
-              color: 'white',
-              padding: '16px 32px',
-              borderRadius: '12px',
-              fontWeight: '600',
-              fontSize: '16px',
-              border: '2px solid rgba(255, 255, 255, 0.3)',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease'
-            }}>
-              Prendre rendez-vous
-            </button>
+            <Link to="/contact">
+              <button style={{
+                backgroundColor: '#3B82F6',
+                color: 'white',
+                padding: '16px 32px',
+                borderRadius: '12px',
+                fontWeight: '600',
+                fontSize: '16px',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 8px 16px -3px rgba(59, 130, 246, 0.4)',
+                transition: 'all 0.3s ease',
+                minWidth: '300px'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 12px 20px -3px rgba(59, 130, 246, 0.6)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 8px 16px -3px rgba(59, 130, 246, 0.4)';
+              }}>
+                Demander un devis gratuit
+              </button>
+            </Link>
+            <Link to="/contact">
+              <button style={{
+                backgroundColor: 'transparent',
+                color: 'white',
+                padding: '16px 32px',
+                borderRadius: '12px',
+                fontWeight: '600',
+                fontSize: '16px',
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                minWidth: '300px'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }}>
+                Prendre rendez-vous
+              </button>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const teamMembers = [
   {
@@ -361,33 +362,55 @@ const Team = () => {
             gap: '16px',
             alignItems: 'center'
           }}>
-            <button style={{
-              backgroundColor: '#3B82F6',
-              color: 'white',
-              padding: '16px 32px',
-              borderRadius: '12px',
-              fontWeight: '600',
-              fontSize: '16px',
-              border: 'none',
-              cursor: 'pointer',
-              boxShadow: '0 8px 16px -3px rgba(59, 130, 246, 0.4)',
-              transition: 'all 0.3s ease'
-            }}>
-              Prendre contact
-            </button>
-            <button style={{
-              backgroundColor: 'transparent',
-              color: 'white',
-              padding: '16px 32px',
-              borderRadius: '12px',
-              fontWeight: '600',
-              fontSize: '16px',
-              border: '2px solid rgba(255, 255, 255, 0.3)',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease'
-            }}>
-              Voir nos services
-            </button>
+            <Link to="/contact">
+              <button style={{
+                backgroundColor: '#3B82F6',
+                color: 'white',
+                padding: '16px 32px',
+                borderRadius: '12px',
+                fontWeight: '600',
+                fontSize: '16px',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 8px 16px -3px rgba(59, 130, 246, 0.4)',
+                transition: 'all 0.3s ease',
+                minWidth: '200px'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 12px 20px -3px rgba(59, 130, 246, 0.6)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 8px 16px -3px rgba(59, 130, 246, 0.4)';
+              }}>
+                Prendre contact
+              </button>
+            </Link>
+            <Link to="/services">
+              <button style={{
+                backgroundColor: 'transparent',
+                color: 'white',
+                padding: '16px 32px',
+                borderRadius: '12px',
+                fontWeight: '600',
+                fontSize: '16px',
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                minWidth: '200px'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }}>
+                Voir nos services
+              </button>
+            </Link>
           </div>
         </div>
       </section>

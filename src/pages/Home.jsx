@@ -117,7 +117,7 @@ const Home = () => {
               e.currentTarget.style.WebkitTextFillColor = "transparent";
             }}
           >
-            AffinityWise, l’alliance de l’expertise et de la créativité
+            AffinityWise, l'alliance de l'expertise et de la créativité
             pour sublimer vos projets IT, développement, vidéo et design.
           </p>
 
@@ -148,6 +148,448 @@ const Home = () => {
               {t("home.cta", "Contactez-nous")}
             </button>
           </Link>
+        </div>
+      </section>
+
+      {/* SECTION NOS SERVICES */}
+      <section style={{
+        padding: '80px 0',
+        backgroundColor: '#F9FAFB'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 24px'
+        }}>
+          {/* Titre de la section */}
+          <div style={{
+            textAlign: 'center',
+            marginBottom: '60px'
+          }}>
+            <h2 style={{
+              fontSize: '48px',
+              fontWeight: 'bold',
+              color: '#1F2937',
+              marginBottom: '20px',
+              fontFamily: 'Poppins, sans-serif',
+              lineHeight: '1.2'
+            }}>
+              Nos <span style={{ color: '#3B82F6' }}>Services</span>
+            </h2>
+            <p style={{
+              fontSize: '20px',
+              color: '#6B7280',
+              maxWidth: '600px',
+              margin: '0 auto',
+              lineHeight: '1.6',
+              fontFamily: 'Inter, sans-serif'
+            }}>
+              Découvrez notre gamme complète de services pour transformer vos idées en réalité digitale
+            </p>
+          </div>
+
+          {/* Grille des services */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gap: '30px',
+            marginBottom: '50px'
+          }}>
+            {/* Service 1: Consulting IT */}
+            <div style={{
+              background: 'white',
+              borderRadius: '20px',
+              padding: '40px 30px',
+              boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
+              border: '1px solid #E5E7EB',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = '0 20px 40px -10px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1)';
+            }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '25px',
+                boxShadow: '0 10px 25px -5px rgba(59, 130, 246, 0.3)'
+              }}>
+                <span style={{ fontSize: '40px' }}>💼</span>
+              </div>
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: 'bold',
+                color: '#1F2937',
+                marginBottom: '15px',
+                fontFamily: 'Poppins, sans-serif'
+              }}>
+                Consulting IT
+              </h3>
+              <p style={{
+                fontSize: '16px',
+                color: '#6B7280',
+                lineHeight: '1.6',
+                marginBottom: '20px',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                Expertise stratégique pour optimiser vos processus IT, audit de sécurité et conseils en transformation digitale.
+              </p>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0
+              }}>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '10px',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Audit de sécurité informatique
+                </li>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '10px',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Optimisation des processus
+                </li>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Stratégie de transformation
+                </li>
+              </ul>
+            </div>
+
+            {/* Service 2: Développement Web */}
+            <div style={{
+              background: 'white',
+              borderRadius: '20px',
+              padding: '40px 30px',
+              boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
+              border: '1px solid #E5E7EB',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = '0 20px 40px -10px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1)';
+            }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '25px',
+                boxShadow: '0 10px 25px -5px rgba(139, 92, 246, 0.3)'
+              }}>
+                <span style={{ fontSize: '40px' }}>💻</span>
+              </div>
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: 'bold',
+                color: '#1F2937',
+                marginBottom: '15px',
+                fontFamily: 'Poppins, sans-serif'
+              }}>
+                Développement Web
+              </h3>
+              <p style={{
+                fontSize: '16px',
+                color: '#6B7280',
+                lineHeight: '1.6',
+                marginBottom: '20px',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                Sites web modernes, applications web et e-commerce sur mesure avec les dernières technologies.
+              </p>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0
+              }}>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '10px',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Sites web responsifs
+                </li>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '10px',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Applications web
+                </li>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  E-commerce
+                </li>
+              </ul>
+            </div>
+
+            {/* Service 3: Design & Création */}
+            <div style={{
+              background: 'white',
+              borderRadius: '20px',
+              padding: '40px 30px',
+              boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
+              border: '1px solid #E5E7EB',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = '0 20px 40px -10px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1)';
+            }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%)',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '25px',
+                boxShadow: '0 10px 25px -5px rgba(245, 158, 11, 0.3)'
+              }}>
+                <span style={{ fontSize: '40px' }}>🎨</span>
+              </div>
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: 'bold',
+                color: '#1F2937',
+                marginBottom: '15px',
+                fontFamily: 'Poppins, sans-serif'
+              }}>
+                Design & Création
+              </h3>
+              <p style={{
+                fontSize: '16px',
+                color: '#6B7280',
+                lineHeight: '1.6',
+                marginBottom: '20px',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                Identité visuelle, logos, maquettes et designs créatifs pour donner vie à votre marque.
+              </p>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0
+              }}>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '10px',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Identité visuelle
+                </li>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '10px',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Logos et branding
+                </li>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Maquettes UI/UX
+                </li>
+              </ul>
+            </div>
+
+            {/* Service 4: Production Vidéo */}
+            <div style={{
+              background: 'white',
+              borderRadius: '20px',
+              padding: '40px 30px',
+              boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
+              border: '1px solid #E5E7EB',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = '0 20px 40px -10px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1)';
+            }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #EF4444 0%, #F87171 100%)',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '25px',
+                boxShadow: '0 10px 25px -5px rgba(239, 68, 68, 0.3)'
+              }}>
+                <span style={{ fontSize: '40px' }}>🎬</span>
+              </div>
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: 'bold',
+                color: '#1F2937',
+                marginBottom: '15px',
+                fontFamily: 'Poppins, sans-serif'
+              }}>
+                Production Vidéo
+              </h3>
+              <p style={{
+                fontSize: '16px',
+                color: '#6B7280',
+                lineHeight: '1.6',
+                marginBottom: '20px',
+                fontFamily: 'Inter, sans-serif'
+              }}>
+                Vidéos promotionnelles, motion design et contenus audiovisuels pour valoriser votre communication.
+              </p>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0
+              }}>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '10px',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Vidéos promotionnelles
+                </li>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '10px',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Motion design
+                </li>
+                <li style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  fontSize: '14px',
+                  color: '#6B7280',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  <span style={{ color: '#10B981', marginRight: '8px' }}>✓</span>
+                  Contenus audiovisuels
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bouton CTA pour les services */}
+          <div style={{
+            textAlign: 'center'
+          }}>
+            <Link to="/services">
+              <button style={{
+                background: 'linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)',
+                color: 'white',
+                padding: '18px 40px',
+                fontSize: '18px',
+                fontWeight: '600',
+                border: 'none',
+                borderRadius: '12px',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                fontFamily: 'Inter, sans-serif',
+                boxShadow: '0 10px 25px -5px rgba(59, 130, 246, 0.4)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 15px 35px -5px rgba(59, 130, 246, 0.6)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(59, 130, 246, 0.4)';
+              }}>
+                Découvrir tous nos services
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
     </>

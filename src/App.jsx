@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import FloatingNav from "./components/FloatingNav";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -24,6 +25,7 @@ const App = () => (
         </Routes>
       </main>
       <Footer />
+      <FloatingNav />
     </div>
   </Router>
 );

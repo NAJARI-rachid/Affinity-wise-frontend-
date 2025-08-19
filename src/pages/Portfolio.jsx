@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -441,21 +442,31 @@ const Portfolio = () => {
               }}>
                 Inspiré par nos réalisations ? Contactez-nous pour discuter de votre projet et transformer vos idées en réalité !
               </p>
-              <button style={{
-                backgroundColor: 'white',
-                color: '#3B82F6',
-                padding: '16px 32px',
-                borderRadius: '12px',
-                fontWeight: '600',
-                fontSize: '16px',
-                border: 'none',
-                cursor: 'pointer',
-                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.2)',
-                transition: 'all 0.3s ease',
-                fontFamily: 'Inter, sans-serif'
-              }}>
-                Démarrer un projet
-              </button>
+              <Link to="/contact">
+                <button style={{
+                  backgroundColor: 'white',
+                  color: '#3B82F6',
+                  padding: '16px 32px',
+                  borderRadius: '12px',
+                  fontWeight: '600',
+                  fontSize: '16px',
+                  border: 'none',
+                  cursor: 'pointer',
+                  boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.2)',
+                  transition: 'all 0.3s ease',
+                  fontFamily: 'Inter, sans-serif'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 15px 25px -3px rgba(0, 0, 0, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.2)';
+                }}>
+                  Démarrer un projet
+                </button>
+              </Link>
             </div>
           </div>
         </div>
